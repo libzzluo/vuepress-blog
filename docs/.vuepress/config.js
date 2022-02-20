@@ -1,6 +1,6 @@
 module.exports = {
   theme: 'antdocs',
-  title: 'xu63\'s Blog',
+  title: '内燃机音乐人\'s Blog',
   description: '自豪地使用VuePress (ˊᗜˋ*)',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     ['link', { rel: 'icon', href: '/images/photo.jpg' }],
@@ -23,10 +23,24 @@ module.exports = {
   }, // 代码块是否显示行号
   themeConfig: {
     nav:[ // 导航栏配置
-      {text: '文檔', link: '/docs/' },
-      {text: '相片', link: '/pic/'},
-      {text: '記錄', link: '/note/'},
-	  {text: '總結', link: '/summary/'}
+	  {
+        text: "記錄",
+        link: "/note/",
+        items: [
+          { text: "Vuepress", link: "/note/Vuepress.md" },
+          { text: "C/C++/C#", link: "/note/C.md" },
+		  { text: "海洋理论", link: "/note/sea.md" }
+        ]
+      },
+	  {
+        text: "看見",
+        link: "/pic/",
+        items: [
+          { text: "电影", link: "/pic/movie.md" },
+          { text: "书", link: "/pic/book.md" }
+        ]
+      },
+	  
     ],
     // sidebar:{
     //   '/accumulate/': [
@@ -57,7 +71,7 @@ module.exports = {
     //       }
     //     ]
     // },
-    sidebar: 'auto', // 侧边栏配置
-    sidebarDepth: 2
+    //sidebar: 'auto', // 侧边栏配置
+    //sidebarDepth: 2
     }
 };
